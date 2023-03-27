@@ -588,7 +588,7 @@ namespace XeRaVaoCong
             string type =Convert.ToString( grvTruckInout.GetFocusedRowCellValue("TruckReason"));
             if (type == "Nhan vien")
             {
-                result = DataProcess<object>.ExecuteNoQuery("Update Gate_TruckInOut Set CheckOut = Yes, TimeOut = Now() Where TruckInOutID = " + TruckInOutID);
+                result = DataProcess<object>.ExecuteNoQuery("Update Gate_TruckInOut Set CheckOut = 1, TimeOut = GETDATE() Where TruckInOutID = " + TruckInOutID);
                 this.radioGroup1.SelectedIndex = 0;
                 return;
             }
@@ -600,7 +600,7 @@ namespace XeRaVaoCong
                 return;
             }
 
-            result = DataProcess<object>.ExecuteNoQuery("Update Gate_TruckInOut Set CheckOut = Yes, TimeOut = Now() Where TruckInOutID = " + TruckInOutID);
+            result = DataProcess<object>.ExecuteNoQuery("Update Gate_TruckInOut Set CheckOut = 1, TimeOut = GETDATE() Where TruckInOutID = " + TruckInOutID);
             this.radioGroup1.SelectedIndex = 0;
         }
 
