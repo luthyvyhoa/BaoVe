@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerMainID" Type="Int32" Nullable="false" />
+    <Property Name="Initial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrimaryContact" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Phone1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fax2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="OtherContacts" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="MarketingInfor" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerInvoiceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerInvoiceAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerInvoiceTaxCode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerDiscontinued" Type="Boolean" />
+    <Property Name="CustomerCategory" Type="Byte" Nullable="false" />
+    <Property Name="CustomerGroup" Type="Byte" />
+    <Property Name="CustomerByExpiryDate" Type="Boolean" />
+    <Property Name="SendNote" Type="Boolean" />
+    <Property Name="CustomerSubID" Type="Int32" />
+    <Property Name="Hold" Type="Boolean" />
+    <Property Name="HoldMessage" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ts" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="HomeLocationChange" Type="Boolean" />
+    <Property Name="DispatchingByClient" Type="Boolean" />
+    <Property Name="CustomerPalletType" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EmailBilling" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerDispatchType" Type="Byte" />
+    <Property Name="IsAllowEDI" Type="Boolean" />
+    <Property Name="HoldLimitWeight" Type="Int32" />
+    <Property Name="CustomerTaxGroup" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BarcodeScanRequire" Type="Boolean" />
+    <Property Name="DefaultProcessTime" Type="Int16" />
+    <Property Name="StoreID" Type="Int32" />
+    <Property Name="CustomerPotentialCategoryID" Type="Byte" />
+    <Property Name="HomeLocation1" Type="Int32" />
+    <Property Name="HomeLocation2" Type="Int32" />
+    <Property Name="CustomerAssignedTo" Type="Int32" />
+    <Property Name="InvoiceSendEmail" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerReportType" Type="Int32" />
+    <Property Name="ERPProductLength" Type="Int32" />
+    <Property Name="isKPIReportRequire" Type="Boolean" />
+    <Property Name="CustomerMainOnReport" Type="Int32" />
+    <Property Name="AllowCartonWeightScanOut" Type="Boolean" />
+    <Property Name="AllowKGRDirectPick" Type="Boolean" />
+    <Property Name="Token" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Passwords" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="WarehouseID" Type="Int32" />
+    <Property Name="BillingInstructions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BillingInstructionUpdateTime" Type="DateTime" Precision="0" />
+    <Property Name="VATPercentage" Type="Int32" />
+    <Property Name="CustomerNumberM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerMainInvoiceID" Type="Int32" />
+    <Property Name="CustomerMainContractID" Type="Int32" />
+    <Property Name="UpdateBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="UpdateTime" Type="DateTime" Precision="0" />
+    <Property Name="LSPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isAllowDataIntegration" Type="Boolean" />
+    <Property Name="CustomerNumberWorkday" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Payer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="WMSDBEntities" annotation:LazyLoadingEnabled="false">
+    <EntitySet Name="Customers" EntityType="Self.Customers" />
+    <EntitySet Name="UserAccounts" EntityType="WMSDBModel.UserAccounts" />
+    <EntitySet Name="UserApplicationActivities" EntityType="WMSDBModel.UserApplicationActivities" />
+    <FunctionImport Name="STUserAccountLogin" ReturnType="Collection(WMSDBModel.STUserAccountLogin_Result)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_TruckInOut" ReturnType="Collection(WMSDBModel.STGate_TruckInOut_Result)">
+      <Parameter Name="StoreID" Mode="In" Type="Int32" />
+      <Parameter Name="Gate" Mode="In" Type="Int32" />
+      <Parameter Name="Flag" Mode="In" Type="Byte" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_TruckInOutRecent" ReturnType="Collection(WMSDBModel.STGate_TruckInOutRecent_Result)">
+      <Parameter Name="Gate" Mode="In" Type="Byte" />
+    </FunctionImport>
+    <EntitySet Name="Gates" EntityType="WMSDBModel.Gates" />
+    <EntitySet Name="Stores" EntityType="WMSDBModel.Stores" />
+    <FunctionImport Name="STGate_ContainerCheckings" ReturnType="Collection(WMSDBModel.STGate_ContainerCheckings_Result)">
+      <Parameter Name="OrderNumber" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContainerCheckingsByContInOutID" ReturnType="Collection(WMSDBModel.STGate_ContainerCheckingsByContInOutID_Result)">
+      <Parameter Name="Gate_ContInOutID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOut" ReturnType="Collection(WMSDBModel.STGate_ContInOut_Result)">
+      <Parameter Name="StoreID" Mode="In" Type="Int32" />
+      <Parameter Name="Gate" Mode="In" Type="Int32" />
+      <Parameter Name="Flag" Mode="In" Type="Byte" />
+      <Parameter Name="ReportDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutByCustomer" ReturnType="Collection(WMSDBModel.STGate_ContInOutByCustomer_Result)">
+      <Parameter Name="CustomerID" Mode="In" Type="Int32" />
+      <Parameter Name="varStoreID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutByDate" ReturnType="Collection(WMSDBModel.STGate_ContInOutByDate_Result)">
+      <Parameter Name="ReportDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Gate" Mode="In" Type="Int32" />
+      <Parameter Name="varStoreID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutEdit">
+      <Parameter Name="varContInOutID" Mode="In" Type="Int32" />
+      <Parameter Name="varCustomerName" Mode="In" Type="String" />
+      <Parameter Name="varContainerNum" Mode="In" Type="String" />
+      <Parameter Name="varReason" Mode="In" Type="String" />
+      <Parameter Name="varTruckIn" Mode="In" Type="String" />
+      <Parameter Name="varContainerType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutRecent" ReturnType="Collection(WMSDBModel.STGate_ContInOutRecent_Result)">
+      <Parameter Name="Gate" Mode="In" Type="Int32" />
+      <Parameter Name="varStoreID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutRemain" ReturnType="Collection(WMSDBModel.STGate_ContInOutRemain_Result)">
+      <Parameter Name="Gate" Mode="In" Type="Byte" />
+      <Parameter Name="varStoreID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutUpdate">
+      <Parameter Name="varContInOutID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="STGate_ContInOutUpdate_1">
+      <Parameter Name="varContInOutID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="UserAccounts">
+    <Key>
+      <PropertyRef Name="LoginName" />
+    </Key>
+    <Property Name="LoginName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="VietnamName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LevelOfAuthorization" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Gate" Type="Int32" Nullable="false" />
+    <Property Name="DefaultCustomer" Type="Int32" />
+    <Property Name="IsAllowEDI" Type="Boolean" Nullable="false" />
+    <Property Name="UserActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedTime" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="WarehouseID" Type="Byte" />
+    <Property Name="DeviceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsOnline" Type="Boolean" />
+    <Property Name="IsAllowOutside" Type="Boolean" />
+    <Property Name="IsAllowChangeStore" Type="Boolean" />
+    <Property Name="LastActivityDate" Type="DateTime" Precision="0" />
+    <Property Name="TS" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DepartmentCategoryID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="WHCRoles" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isWHCUser" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="UserApplicationActivities">
+    <Key>
+      <PropertyRef Name="UserApplicationActivityID" />
+    </Key>
+    <Property Name="UserApplicationActivityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApplicationVersion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginTime" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DeviceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NetworkData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="GeographicData" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="STUserAccountLogin_Result">
+    <Property Type="Int32" Name="StoreID" Nullable="false" />
+    <Property Type="Byte" Name="WarehouseID" Nullable="true" />
+    <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+    <Property Type="Int32" Name="Gate" Nullable="false" />
+    <Property Type="String" Name="LoginName" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="VietnamName" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="IsAllowChangeStore" Nullable="true" />
+    <Property Type="Boolean" Name="IsAllowOutside" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="STGate_TruckInOut_Result">
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="TruckInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TruckNum" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DriverName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TruckType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TruckReason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CM_BL" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Byte" Name="Gate" Nullable="false" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="Double" Name="PowerQuantity" Nullable="true" />
+    <Property Type="Double" Name="RunningFloat" Nullable="true" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Single" Name="LoadingCapacity" Nullable="true" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="STGate_TruckInOutRecent_Result">
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="TruckInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TruckNum" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="DriverName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TruckType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TruckReason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CM_BL" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Byte" Name="Gate" Nullable="false" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="Double" Name="PowerQuantity" Nullable="true" />
+    <Property Type="Double" Name="RunningFloat" Nullable="true" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Single" Name="LoadingCapacity" Nullable="true" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+  </ComplexType>
+  <EntityType Name="Gates">
+    <Key>
+      <PropertyRef Name="Gate" />
+    </Key>
+    <Property Name="Gate" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreID" Type="Byte" Nullable="false" />
+    <Property Name="GateVietnam" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Stores">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="Int32" Nullable="false" />
+    <Property Name="StoreNumber" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="StoreDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="StoreVietnam" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="RangeID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StoreNumberM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_URL_Publish" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_URL_Portal" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_URL_Business" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="E_InvoiceCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TelFaxVAT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="TaxCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_AdminUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="E_Invoice_AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StoreRegion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="StoreNumberWorkday" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPalletLocations" Type="Int32" />
+    <Property Name="CostCenterWorkday" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FacilityID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WarehouseUtilizationEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="STGate_ContainerCheckings_Result">
+    <Property Type="Int32" Name="ContainerCheckingID" Nullable="false" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="String" Name="TemperatureShow" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TemperatureSetup" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Running" Nullable="true" />
+    <Property Type="Boolean" Name="Thawing" Nullable="true" />
+    <Property Type="Boolean" Name="Stop" Nullable="true" />
+    <Property Type="Boolean" Name="Error" Nullable="true" />
+    <Property Type="Boolean" Name="ProductEmpty" Nullable="true" />
+    <Property Type="Boolean" Name="Seal" Nullable="true" />
+    <Property Type="Boolean" Name="Lock" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Boolean" Name="NoOperation" Nullable="true" />
+    <Property Type="Boolean" Name="Electricity" Nullable="true" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="VietnamName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STGate_ContainerCheckingsByContInOutID_Result">
+    <Property Type="Int32" Name="ContainerCheckingID" Nullable="false" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="String" Name="TemperatureShow" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="TemperatureSetup" Nullable="true" MaxLength="30" />
+    <Property Type="Boolean" Name="Running" Nullable="true" />
+    <Property Type="Boolean" Name="Thawing" Nullable="true" />
+    <Property Type="Boolean" Name="Stop" Nullable="true" />
+    <Property Type="Boolean" Name="Error" Nullable="true" />
+    <Property Type="Boolean" Name="ProductEmpty" Nullable="true" />
+    <Property Type="Boolean" Name="Seal" Nullable="true" />
+    <Property Type="Boolean" Name="Lock" Nullable="true" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CreatedBy" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CreatedTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Boolean" Name="NoOperation" Nullable="true" />
+    <Property Type="Boolean" Name="Electricity" Nullable="true" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="VietnamName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="STGate_ContInOut_Result">
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Reason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="Via" Nullable="true" />
+    <Property Type="Int32" Name="OtherServiceID" Nullable="true" />
+    <Property Type="String" Name="TruckIn" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="TruckOut" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Boolean" Name="TruckCheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="UserTruckOut" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Gate" Nullable="true" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Single" Name="RunningFloat" Nullable="true" />
+    <Property Type="Single" Name="PowerQuantity" Nullable="true" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TempOut" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="STGate_ContInOutByCustomer_Result">
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Reason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="Via" Nullable="true" />
+    <Property Type="DateTime" Name="RunningHour" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="OtherServiceID" Nullable="true" />
+    <Property Type="String" Name="TruckIn" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="TruckOut" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Boolean" Name="TruckCheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="UserTruckOut" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Gate" Nullable="true" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="String" Name="TempOut" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="STGate_ContInOutByDate_Result">
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Reason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="Via" Nullable="true" />
+    <Property Type="DateTime" Name="RunningHour" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="OtherServiceID" Nullable="true" />
+    <Property Type="String" Name="TruckIn" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="TruckOut" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Boolean" Name="TruckCheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="UserTruckOut" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Gate" Nullable="true" />
+    <Property Type="DateTime" Name="DateIn" Nullable="true" Precision="16" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TempOut" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="STGate_ContInOutRecent_Result">
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Reason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="Via" Nullable="true" />
+    <Property Type="Int32" Name="OtherServiceID" Nullable="true" />
+    <Property Type="String" Name="TruckIn" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="TruckOut" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Boolean" Name="TruckCheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="UserTruckOut" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Gate" Nullable="true" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Single" Name="RunningFloat" Nullable="true" />
+    <Property Type="Single" Name="PowerQuantity" Nullable="true" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TempOut" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="STGate_ContInOutRemain_Result">
+    <Property Type="Int32" Name="ContInOutID" Nullable="false" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ContainerNum" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContainerType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Reason" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ProductQty" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="TimeIn" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="CheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="TimeOut" Nullable="true" Precision="16" />
+    <Property Type="Boolean" Name="Via" Nullable="true" />
+    <Property Type="Int32" Name="OtherServiceID" Nullable="true" />
+    <Property Type="String" Name="TruckIn" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="TruckOut" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="UserOut" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="UserCheckOut" Nullable="true" />
+    <Property Type="Boolean" Name="TruckCheckOut" Nullable="true" />
+    <Property Type="DateTime" Name="StartTime" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="EndTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="UserTruckOut" Nullable="true" MaxLength="50" />
+    <Property Type="Byte" Name="Gate" Nullable="true" />
+    <Property Type="String" Name="OrderNumber" Nullable="true" MaxLength="20" />
+    <Property Type="Single" Name="RunningFloat" Nullable="true" />
+    <Property Type="Single" Name="PowerQuantity" Nullable="true" />
+    <Property Type="String" Name="SealNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TempOut" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="DockNumber" Nullable="true" MaxLength="5" />
+    <Property Type="Int64" Name="DriverMobilePhone" Nullable="true" />
+    <Property Type="DateTime" Name="ExpectedProcessTime" Nullable="true" Precision="16" />
+    <Property Type="String" Name="CustomerRequirement" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+  </ComplexType>
+</Schema>

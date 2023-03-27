@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>ftp://10.0.41.15/Setups/TBV/|ftp://10.0.41.15/Setups/TBV_TEST/|C:\Users\Administrator\Downloads\SETUP\|ftp://10.0.41.15/Setups/BV_TKM/|ftp://125.212.248.71/Setup/BV_TKM/</PublishUrlHistory>
+    <InstallUrlHistory>http://10.0.41.15/TBV/|http://10.0.41.15/BV_KNM/|http://10.0.41.15/BV_TMK/|http://125.212.248.71/BV_TKM/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

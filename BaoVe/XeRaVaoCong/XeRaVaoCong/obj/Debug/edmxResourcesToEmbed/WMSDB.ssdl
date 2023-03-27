@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WMSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="CustomerNumber" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="200" />
+    <Property Name="CustomerMainID" Type="int" Nullable="false" />
+    <Property Name="Initial" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomerType" Type="varchar" MaxLength="50" />
+    <Property Name="PrimaryContact" Type="nvarchar" MaxLength="150" />
+    <Property Name="Phone1" Type="varchar" MaxLength="50" />
+    <Property Name="Phone2" Type="varchar" MaxLength="50" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="50" />
+    <Property Name="Fax2" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="3000" />
+    <Property Name="OtherContacts" Type="nvarchar" MaxLength="150" />
+    <Property Name="MarketingInfor" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CustomerInvoiceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustomerInvoiceAddress" Type="nvarchar" MaxLength="250" />
+    <Property Name="CustomerInvoiceTaxCode" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerDiscontinued" Type="bit" />
+    <Property Name="CustomerCategory" Type="tinyint" Nullable="false" />
+    <Property Name="CustomerGroup" Type="tinyint" />
+    <Property Name="CustomerByExpiryDate" Type="bit" />
+    <Property Name="SendNote" Type="bit" />
+    <Property Name="CustomerSubID" Type="int" />
+    <Property Name="Hold" Type="bit" />
+    <Property Name="HoldMessage" Type="nvarchar" MaxLength="200" />
+    <Property Name="ts" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="HomeLocationChange" Type="bit" />
+    <Property Name="DispatchingByClient" Type="bit" />
+    <Property Name="CustomerPalletType" Type="varchar" MaxLength="4" />
+    <Property Name="Website" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailBilling" Type="nvarchar" MaxLength="500" />
+    <Property Name="CustomerDispatchType" Type="tinyint" />
+    <Property Name="IsAllowEDI" Type="bit" />
+    <Property Name="HoldLimitWeight" Type="int" />
+    <Property Name="CustomerTaxGroup" Type="nvarchar" MaxLength="100" />
+    <Property Name="BarcodeScanRequire" Type="bit" />
+    <Property Name="DefaultProcessTime" Type="smallint" />
+    <Property Name="StoreID" Type="int" />
+    <Property Name="CustomerPotentialCategoryID" Type="tinyint" />
+    <Property Name="HomeLocation1" Type="int" />
+    <Property Name="HomeLocation2" Type="int" />
+    <Property Name="CustomerAssignedTo" Type="int" />
+    <Property Name="InvoiceSendEmail" Type="varchar" MaxLength="3000" />
+    <Property Name="CustomerReportType" Type="int" />
+    <Property Name="ERPProductLength" Type="int" />
+    <Property Name="isKPIReportRequire" Type="bit" />
+    <Property Name="CustomerMainOnReport" Type="int" />
+    <Property Name="AllowCartonWeightScanOut" Type="bit" />
+    <Property Name="AllowKGRDirectPick" Type="bit" />
+    <Property Name="Token" Type="varchar" MaxLength="200" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Passwords" Type="nvarchar" MaxLength="128" />
+    <Property Name="WarehouseID" Type="int" />
+    <Property Name="BillingInstructions" Type="nvarchar(max)" />
+    <Property Name="BillingInstructionUpdateTime" Type="smalldatetime" />
+    <Property Name="VATPercentage" Type="int" />
+    <Property Name="CustomerNumberM3" Type="varchar" MaxLength="50" />
+    <Property Name="CustomerMainInvoiceID" Type="int" />
+    <Property Name="CustomerMainContractID" Type="int" />
+    <Property Name="UpdateBy" Type="varchar" MaxLength="20" />
+    <Property Name="UpdateTime" Type="smalldatetime" />
+    <Property Name="LSPCode" Type="varchar" MaxLength="50" />
+    <Property Name="isAllowDataIntegration" Type="bit" />
+    <Property Name="CustomerNumberWorkday" Type="varchar" MaxLength="50" />
+    <Property Name="Payer" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Gates">
+    <Key>
+      <PropertyRef Name="Gate" />
+    </Key>
+    <Property Name="Gate" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreID" Type="tinyint" Nullable="false" />
+    <Property Name="GateVietnam" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stores">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="StoreNumber" Type="nvarchar" MaxLength="2" />
+    <Property Name="StoreDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="StoreVietnam" Type="nvarchar" MaxLength="250" />
+    <Property Name="RangeID" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="nvarchar" MaxLength="500" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="500" />
+    <Property Name="StoreNumberM3" Type="varchar" MaxLength="50" />
+    <Property Name="E_Invoice_URL_Publish" Type="varchar" MaxLength="500" />
+    <Property Name="E_Invoice_URL_Portal" Type="varchar" MaxLength="500" />
+    <Property Name="E_Invoice_URL_Business" Type="varchar" MaxLength="500" />
+    <Property Name="E_Invoice_UserName" Type="varchar" MaxLength="50" />
+    <Property Name="E_Invoice_Password" Type="varchar" MaxLength="50" />
+    <Property Name="E_InvoiceCode" Type="varchar" MaxLength="50" />
+    <Property Name="TelFaxVAT" Type="varchar" MaxLength="500" />
+    <Property Name="TaxCode" Type="varchar" MaxLength="50" />
+    <Property Name="E_Invoice_AdminUser" Type="varchar" MaxLength="50" />
+    <Property Name="E_Invoice_AdminPassword" Type="varchar" MaxLength="50" />
+    <Property Name="StoreRegion" Type="varchar" MaxLength="50" />
+    <Property Name="StoreNumberWorkday" Type="varchar" MaxLength="50" />
+    <Property Name="TotalPalletLocations" Type="int" />
+    <Property Name="CostCenterWorkday" Type="varchar" MaxLength="50" />
+    <Property Name="FacilityID" Type="varchar" MaxLength="50" />
+    <Property Name="WarehouseUtilizationEmail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="UserAccounts">
+    <Key>
+      <PropertyRef Name="LoginName" />
+    </Key>
+    <Property Name="LoginName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="VietnamName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LevelOfAuthorization" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Gate" Type="int" Nullable="false" />
+    <Property Name="DefaultCustomer" Type="int" />
+    <Property Name="IsAllowEDI" Type="bit" Nullable="false" />
+    <Property Name="UserActive" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="25" />
+    <Property Name="CreatedTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="StoreID" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" />
+    <Property Name="WarehouseID" Type="tinyint" />
+    <Property Name="DeviceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsOnline" Type="bit" />
+    <Property Name="IsAllowOutside" Type="bit" />
+    <Property Name="IsAllowChangeStore" Type="bit" />
+    <Property Name="LastActivityDate" Type="smalldatetime" />
+    <Property Name="TS" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="DepartmentCategoryID" Type="varchar" MaxLength="4" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="150" />
+    <Property Name="WHCRoles" Type="varchar" MaxLength="50" />
+    <Property Name="isWHCUser" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserApplicationActivities">
+    <Key>
+      <PropertyRef Name="UserApplicationActivityID" />
+    </Key>
+    <Property Name="UserApplicationActivityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="ApplicationName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApplicationVersion" Type="varchar" MaxLength="50" />
+    <Property Name="LoginTime" Type="smalldatetime" Nullable="false" />
+    <Property Name="DeviceNumber" Type="varchar" MaxLength="50" />
+    <Property Name="NetworkData" Type="nvarchar" MaxLength="500" />
+    <Property Name="GeographicData" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Function Name="STGate_ContainerCheckings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrderNumber" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContainerCheckingsByContInOutID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Gate_ContInOutID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StoreID" Type="int" Mode="In" />
+    <Parameter Name="Gate" Type="int" Mode="In" />
+    <Parameter Name="Flag" Type="tinyint" Mode="In" />
+    <Parameter Name="ReportDate" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutByCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CustomerID" Type="int" Mode="In" />
+    <Parameter Name="varStoreID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutByDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReportDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="Gate" Type="int" Mode="In" />
+    <Parameter Name="varStoreID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="varContInOutID" Type="int" Mode="In" />
+    <Parameter Name="varCustomerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="varContainerNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="varReason" Type="nvarchar" Mode="In" />
+    <Parameter Name="varTruckIn" Type="nvarchar" Mode="In" />
+    <Parameter Name="varContainerType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutRecent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Gate" Type="int" Mode="In" />
+    <Parameter Name="varStoreID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutRemain" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Gate" Type="tinyint" Mode="In" />
+    <Parameter Name="varStoreID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="varContInOutID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_ContInOutUpdate_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="STGate_ContInOutUpdate#1">
+    <Parameter Name="varContInOutID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="STGate_TruckInOut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StoreID" Type="int" Mode="In" />
+    <Parameter Name="Gate" Type="int" Mode="In" />
+    <Parameter Name="Flag" Type="tinyint" Mode="In" />
+    <Parameter Name="FromDate" Type="smalldatetime" Mode="In" />
+    <Parameter Name="Todate" Type="smalldatetime" Mode="In" />
+  </Function>
+  <Function Name="STGate_TruckInOutRecent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Gate" Type="tinyint" Mode="In" />
+  </Function>
+  <Function Name="STUserAccountLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="WMSDBModelStoreContainer">
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gates" EntityType="Self.Gates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stores" EntityType="Self.Stores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAccounts" EntityType="Self.UserAccounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserApplicationActivities" EntityType="Self.UserApplicationActivities" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

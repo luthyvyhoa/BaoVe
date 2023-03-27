@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WMSDBModelStoreContainer" CdmEntityContainer="WMSDBEntities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="WMSDBModel.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustomerMainID" ColumnName="CustomerMainID" />
+          <ScalarProperty Name="Initial" ColumnName="Initial" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="PrimaryContact" ColumnName="PrimaryContact" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Fax2" ColumnName="Fax2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OtherContacts" ColumnName="OtherContacts" />
+          <ScalarProperty Name="MarketingInfor" ColumnName="MarketingInfor" />
+          <ScalarProperty Name="CustomerInvoiceName" ColumnName="CustomerInvoiceName" />
+          <ScalarProperty Name="CustomerInvoiceAddress" ColumnName="CustomerInvoiceAddress" />
+          <ScalarProperty Name="CustomerInvoiceTaxCode" ColumnName="CustomerInvoiceTaxCode" />
+          <ScalarProperty Name="CustomerDiscontinued" ColumnName="CustomerDiscontinued" />
+          <ScalarProperty Name="CustomerCategory" ColumnName="CustomerCategory" />
+          <ScalarProperty Name="CustomerGroup" ColumnName="CustomerGroup" />
+          <ScalarProperty Name="CustomerByExpiryDate" ColumnName="CustomerByExpiryDate" />
+          <ScalarProperty Name="SendNote" ColumnName="SendNote" />
+          <ScalarProperty Name="CustomerSubID" ColumnName="CustomerSubID" />
+          <ScalarProperty Name="Hold" ColumnName="Hold" />
+          <ScalarProperty Name="HoldMessage" ColumnName="HoldMessage" />
+          <ScalarProperty Name="ts" ColumnName="ts" />
+          <ScalarProperty Name="HomeLocationChange" ColumnName="HomeLocationChange" />
+          <ScalarProperty Name="DispatchingByClient" ColumnName="DispatchingByClient" />
+          <ScalarProperty Name="CustomerPalletType" ColumnName="CustomerPalletType" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="EmailBilling" ColumnName="EmailBilling" />
+          <ScalarProperty Name="CustomerDispatchType" ColumnName="CustomerDispatchType" />
+          <ScalarProperty Name="IsAllowEDI" ColumnName="IsAllowEDI" />
+          <ScalarProperty Name="HoldLimitWeight" ColumnName="HoldLimitWeight" />
+          <ScalarProperty Name="CustomerTaxGroup" ColumnName="CustomerTaxGroup" />
+          <ScalarProperty Name="BarcodeScanRequire" ColumnName="BarcodeScanRequire" />
+          <ScalarProperty Name="DefaultProcessTime" ColumnName="DefaultProcessTime" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="CustomerPotentialCategoryID" ColumnName="CustomerPotentialCategoryID" />
+          <ScalarProperty Name="HomeLocation1" ColumnName="HomeLocation1" />
+          <ScalarProperty Name="HomeLocation2" ColumnName="HomeLocation2" />
+          <ScalarProperty Name="CustomerAssignedTo" ColumnName="CustomerAssignedTo" />
+          <ScalarProperty Name="InvoiceSendEmail" ColumnName="InvoiceSendEmail" />
+          <ScalarProperty Name="CustomerReportType" ColumnName="CustomerReportType" />
+          <ScalarProperty Name="ERPProductLength" ColumnName="ERPProductLength" />
+          <ScalarProperty Name="isKPIReportRequire" ColumnName="isKPIReportRequire" />
+          <ScalarProperty Name="CustomerMainOnReport" ColumnName="CustomerMainOnReport" />
+          <ScalarProperty Name="AllowCartonWeightScanOut" ColumnName="AllowCartonWeightScanOut" />
+          <ScalarProperty Name="AllowKGRDirectPick" ColumnName="AllowKGRDirectPick" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Passwords" ColumnName="Passwords" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="BillingInstructions" ColumnName="BillingInstructions" />
+          <ScalarProperty Name="BillingInstructionUpdateTime" ColumnName="BillingInstructionUpdateTime" />
+          <ScalarProperty Name="VATPercentage" ColumnName="VATPercentage" />
+          <ScalarProperty Name="CustomerNumberM3" ColumnName="CustomerNumberM3" />
+          <ScalarProperty Name="CustomerMainInvoiceID" ColumnName="CustomerMainInvoiceID" />
+          <ScalarProperty Name="CustomerMainContractID" ColumnName="CustomerMainContractID" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+          <ScalarProperty Name="LSPCode" ColumnName="LSPCode" />
+          <ScalarProperty Name="isAllowDataIntegration" ColumnName="isAllowDataIntegration" />
+          <ScalarProperty Name="CustomerNumberWorkday" ColumnName="CustomerNumberWorkday" />
+          <ScalarProperty Name="Payer" ColumnName="Payer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAccounts">
+      <EntityTypeMapping TypeName="WMSDBModel.UserAccounts">
+        <MappingFragment StoreEntitySet="UserAccounts">
+          <ScalarProperty Name="isWHCUser" ColumnName="isWHCUser" />
+          <ScalarProperty Name="WHCRoles" ColumnName="WHCRoles" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="DepartmentCategoryID" ColumnName="DepartmentCategoryID" />
+          <ScalarProperty Name="TS" ColumnName="TS" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAllowChangeStore" ColumnName="IsAllowChangeStore" />
+          <ScalarProperty Name="IsAllowOutside" ColumnName="IsAllowOutside" />
+          <ScalarProperty Name="IsOnline" ColumnName="IsOnline" />
+          <ScalarProperty Name="DeviceNumber" ColumnName="DeviceNumber" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UserActive" ColumnName="UserActive" />
+          <ScalarProperty Name="IsAllowEDI" ColumnName="IsAllowEDI" />
+          <ScalarProperty Name="DefaultCustomer" ColumnName="DefaultCustomer" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="LevelOfAuthorization" ColumnName="LevelOfAuthorization" />
+          <ScalarProperty Name="VietnamName" ColumnName="VietnamName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserApplicationActivities">
+      <EntityTypeMapping TypeName="WMSDBModel.UserApplicationActivities">
+        <MappingFragment StoreEntitySet="UserApplicationActivities">
+          <ScalarProperty Name="GeographicData" ColumnName="GeographicData" />
+          <ScalarProperty Name="NetworkData" ColumnName="NetworkData" />
+          <ScalarProperty Name="DeviceNumber" ColumnName="DeviceNumber" />
+          <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+          <ScalarProperty Name="ApplicationVersion" ColumnName="ApplicationVersion" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="UserApplicationActivityID" ColumnName="UserApplicationActivityID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="STUserAccountLogin" FunctionName="WMSDBModel.Store.STUserAccountLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STUserAccountLogin_Result">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="WarehouseID" ColumnName="WarehouseID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="VietnamName" ColumnName="VietnamName" />
+          <ScalarProperty Name="IsAllowChangeStore" ColumnName="IsAllowChangeStore" />
+          <ScalarProperty Name="IsAllowOutside" ColumnName="IsAllowOutside" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_TruckInOut" FunctionName="WMSDBModel.Store.STGate_TruckInOut">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_TruckInOut_Result">
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="TruckInOutID" ColumnName="TruckInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="TruckNum" ColumnName="TruckNum" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="TruckType" ColumnName="TruckType" />
+          <ScalarProperty Name="TruckReason" ColumnName="TruckReason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="CM_BL" ColumnName="CM_BL" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+          <ScalarProperty Name="RunningFloat" ColumnName="RunningFloat" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="LoadingCapacity" ColumnName="LoadingCapacity" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_TruckInOutRecent" FunctionName="WMSDBModel.Store.STGate_TruckInOutRecent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_TruckInOutRecent_Result">
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="TruckInOutID" ColumnName="TruckInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="TruckNum" ColumnName="TruckNum" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="TruckType" ColumnName="TruckType" />
+          <ScalarProperty Name="TruckReason" ColumnName="TruckReason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="CM_BL" ColumnName="CM_BL" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+          <ScalarProperty Name="RunningFloat" ColumnName="RunningFloat" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="LoadingCapacity" ColumnName="LoadingCapacity" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Gates">
+      <EntityTypeMapping TypeName="WMSDBModel.Gates">
+        <MappingFragment StoreEntitySet="Gates">
+          <ScalarProperty Name="GateVietnam" ColumnName="GateVietnam" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="WMSDBModel.Stores">
+        <MappingFragment StoreEntitySet="Stores">
+          <ScalarProperty Name="WarehouseUtilizationEmail" ColumnName="WarehouseUtilizationEmail" />
+          <ScalarProperty Name="FacilityID" ColumnName="FacilityID" />
+          <ScalarProperty Name="CostCenterWorkday" ColumnName="CostCenterWorkday" />
+          <ScalarProperty Name="TotalPalletLocations" ColumnName="TotalPalletLocations" />
+          <ScalarProperty Name="StoreNumberWorkday" ColumnName="StoreNumberWorkday" />
+          <ScalarProperty Name="StoreRegion" ColumnName="StoreRegion" />
+          <ScalarProperty Name="E_Invoice_AdminPassword" ColumnName="E_Invoice_AdminPassword" />
+          <ScalarProperty Name="E_Invoice_AdminUser" ColumnName="E_Invoice_AdminUser" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="TelFaxVAT" ColumnName="TelFaxVAT" />
+          <ScalarProperty Name="E_InvoiceCode" ColumnName="E_InvoiceCode" />
+          <ScalarProperty Name="E_Invoice_Password" ColumnName="E_Invoice_Password" />
+          <ScalarProperty Name="E_Invoice_UserName" ColumnName="E_Invoice_UserName" />
+          <ScalarProperty Name="E_Invoice_URL_Business" ColumnName="E_Invoice_URL_Business" />
+          <ScalarProperty Name="E_Invoice_URL_Portal" ColumnName="E_Invoice_URL_Portal" />
+          <ScalarProperty Name="E_Invoice_URL_Publish" ColumnName="E_Invoice_URL_Publish" />
+          <ScalarProperty Name="StoreNumberM3" ColumnName="StoreNumberM3" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RangeID" ColumnName="RangeID" />
+          <ScalarProperty Name="StoreVietnam" ColumnName="StoreVietnam" />
+          <ScalarProperty Name="StoreDescription" ColumnName="StoreDescription" />
+          <ScalarProperty Name="StoreNumber" ColumnName="StoreNumber" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContainerCheckings" FunctionName="WMSDBModel.Store.STGate_ContainerCheckings">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContainerCheckings_Result">
+          <ScalarProperty Name="ContainerCheckingID" ColumnName="ContainerCheckingID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="TemperatureShow" ColumnName="TemperatureShow" />
+          <ScalarProperty Name="TemperatureSetup" ColumnName="TemperatureSetup" />
+          <ScalarProperty Name="Running" ColumnName="Running" />
+          <ScalarProperty Name="Thawing" ColumnName="Thawing" />
+          <ScalarProperty Name="Stop" ColumnName="Stop" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="ProductEmpty" ColumnName="ProductEmpty" />
+          <ScalarProperty Name="Seal" ColumnName="Seal" />
+          <ScalarProperty Name="Lock" ColumnName="Lock" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="NoOperation" ColumnName="NoOperation" />
+          <ScalarProperty Name="Electricity" ColumnName="Electricity" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="VietnamName" ColumnName="VietnamName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContainerCheckingsByContInOutID" FunctionName="WMSDBModel.Store.STGate_ContainerCheckingsByContInOutID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContainerCheckingsByContInOutID_Result">
+          <ScalarProperty Name="ContainerCheckingID" ColumnName="ContainerCheckingID" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="TemperatureShow" ColumnName="TemperatureShow" />
+          <ScalarProperty Name="TemperatureSetup" ColumnName="TemperatureSetup" />
+          <ScalarProperty Name="Running" ColumnName="Running" />
+          <ScalarProperty Name="Thawing" ColumnName="Thawing" />
+          <ScalarProperty Name="Stop" ColumnName="Stop" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="ProductEmpty" ColumnName="ProductEmpty" />
+          <ScalarProperty Name="Seal" ColumnName="Seal" />
+          <ScalarProperty Name="Lock" ColumnName="Lock" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="NoOperation" ColumnName="NoOperation" />
+          <ScalarProperty Name="Electricity" ColumnName="Electricity" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="VietnamName" ColumnName="VietnamName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContInOut" FunctionName="WMSDBModel.Store.STGate_ContInOut">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContInOut_Result">
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="ContainerType" ColumnName="ContainerType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="OtherServiceID" ColumnName="OtherServiceID" />
+          <ScalarProperty Name="TruckIn" ColumnName="TruckIn" />
+          <ScalarProperty Name="TruckOut" ColumnName="TruckOut" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="TruckCheckOut" ColumnName="TruckCheckOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="UserTruckOut" ColumnName="UserTruckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="RunningFloat" ColumnName="RunningFloat" />
+          <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="TempOut" ColumnName="TempOut" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutByCustomer" FunctionName="WMSDBModel.Store.STGate_ContInOutByCustomer">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContInOutByCustomer_Result">
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="ContainerType" ColumnName="ContainerType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="RunningHour" ColumnName="RunningHour" />
+          <ScalarProperty Name="OtherServiceID" ColumnName="OtherServiceID" />
+          <ScalarProperty Name="TruckIn" ColumnName="TruckIn" />
+          <ScalarProperty Name="TruckOut" ColumnName="TruckOut" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="TruckCheckOut" ColumnName="TruckCheckOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="UserTruckOut" ColumnName="UserTruckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="TempOut" ColumnName="TempOut" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutByDate" FunctionName="WMSDBModel.Store.STGate_ContInOutByDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContInOutByDate_Result">
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="ContainerType" ColumnName="ContainerType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="RunningHour" ColumnName="RunningHour" />
+          <ScalarProperty Name="OtherServiceID" ColumnName="OtherServiceID" />
+          <ScalarProperty Name="TruckIn" ColumnName="TruckIn" />
+          <ScalarProperty Name="TruckOut" ColumnName="TruckOut" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="TruckCheckOut" ColumnName="TruckCheckOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="UserTruckOut" ColumnName="UserTruckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="TempOut" ColumnName="TempOut" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutEdit" FunctionName="WMSDBModel.Store.STGate_ContInOutEdit" />
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutRecent" FunctionName="WMSDBModel.Store.STGate_ContInOutRecent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContInOutRecent_Result">
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="ContainerType" ColumnName="ContainerType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="OtherServiceID" ColumnName="OtherServiceID" />
+          <ScalarProperty Name="TruckIn" ColumnName="TruckIn" />
+          <ScalarProperty Name="TruckOut" ColumnName="TruckOut" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="TruckCheckOut" ColumnName="TruckCheckOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="UserTruckOut" ColumnName="UserTruckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="RunningFloat" ColumnName="RunningFloat" />
+          <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="TempOut" ColumnName="TempOut" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutRemain" FunctionName="WMSDBModel.Store.STGate_ContInOutRemain">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WMSDBModel.STGate_ContInOutRemain_Result">
+          <ScalarProperty Name="ContInOutID" ColumnName="ContInOutID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="ContainerNum" ColumnName="ContainerNum" />
+          <ScalarProperty Name="ContainerType" ColumnName="ContainerType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ProductQty" ColumnName="ProductQty" />
+          <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+          <ScalarProperty Name="CheckOut" ColumnName="CheckOut" />
+          <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+          <ScalarProperty Name="Via" ColumnName="Via" />
+          <ScalarProperty Name="OtherServiceID" ColumnName="OtherServiceID" />
+          <ScalarProperty Name="TruckIn" ColumnName="TruckIn" />
+          <ScalarProperty Name="TruckOut" ColumnName="TruckOut" />
+          <ScalarProperty Name="UserOut" ColumnName="UserOut" />
+          <ScalarProperty Name="UserCheckOut" ColumnName="UserCheckOut" />
+          <ScalarProperty Name="TruckCheckOut" ColumnName="TruckCheckOut" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="UserTruckOut" ColumnName="UserTruckOut" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="RunningFloat" ColumnName="RunningFloat" />
+          <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+          <ScalarProperty Name="SealNumber" ColumnName="SealNumber" />
+          <ScalarProperty Name="TempOut" ColumnName="TempOut" />
+          <ScalarProperty Name="DockNumber" ColumnName="DockNumber" />
+          <ScalarProperty Name="DriverMobilePhone" ColumnName="DriverMobilePhone" />
+          <ScalarProperty Name="ExpectedProcessTime" ColumnName="ExpectedProcessTime" />
+          <ScalarProperty Name="CustomerRequirement" ColumnName="CustomerRequirement" />
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutUpdate" FunctionName="WMSDBModel.Store.STGate_ContInOutUpdate" />
+    <FunctionImportMapping FunctionImportName="STGate_ContInOutUpdate_1" FunctionName="WMSDBModel.Store.STGate_ContInOutUpdate_1" />
+  </EntityContainerMapping>
+</Mapping>
