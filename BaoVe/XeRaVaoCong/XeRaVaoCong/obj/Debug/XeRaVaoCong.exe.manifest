@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XeRaVaoCong.exe" size="888320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XeRaVaoCong.exe" size="888832">
       <assemblyIdentity name="XeRaVaoCong" version="1.0.2.4" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CKVTb+HjftUIx3FwEQhBI3Kbe1QYGOwMm5oTXCHPe7c=</dsig:DigestValue>
+        <dsig:DigestValue>42yUCt5X65msq8FeRCc99HI+k4Y9nIRu+7aKx3jwDpU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
