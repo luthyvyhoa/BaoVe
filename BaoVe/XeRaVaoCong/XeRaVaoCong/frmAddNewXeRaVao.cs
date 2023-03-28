@@ -54,7 +54,6 @@ namespace XeRaVaoCong
             txtTaiXe.ReadOnly = true;
             txtSDT.ReadOnly = true;
             lkeMaKH.ReadOnly = true;
-            txtTenKH.ReadOnly = true;
             txtTaiTrong.ReadOnly = true;
 
             int index = 0;
